@@ -21,7 +21,7 @@ class EulerMaximumTest(unittest.TestCase):
         (30, (30, 8)),
         (209, (30, 8)),
         (210, (210, 48)),
-        (1000000, (510510, 	92160)),
+        (1000000, (510510, 92160)),
     )
     @ddt.unpack
     def test_result(self, data, expected):

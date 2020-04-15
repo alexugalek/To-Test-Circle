@@ -1,11 +1,11 @@
 import ddt
 from io import StringIO
 import os
-import sys
 import shutil
+import sys
 import task3 as test_module3
-import unittest
 import re
+import unittest
 
 working_catalog = 'data5/'
 # test_module should work with working_catalog
@@ -31,11 +31,10 @@ def file_handler(file_name):
 
 def ratings_gist_handler(file_name):
     """Ratings gist file parser
+
     If we don't know separator between rating and value
     we should use re.
     If format of ratings.txt is set we can use file_handler function
-
-
     :param file_name: <directory>/ratings.txt
     :return: list of tuples
     """
@@ -48,11 +47,10 @@ def ratings_gist_handler(file_name):
 
 def years_gist_handler(file_name):
     """Years gist file parser
+
     If we don't know separator between year and value
     we should use re.
     If format of ratings.txt is set we can use file_handler function
-
-
     :param file_name: <directory>/years.txt
     :return: list of tuples
     """
