@@ -1,4 +1,5 @@
-from abc import ABC, abstractmethod
+from abc import ABC
+from abc import abstractmethod
 
 
 class Orders(object):
@@ -106,7 +107,7 @@ class Customer(object):
         self.credit = 0
 
     def place_order(self, food_name, waiter):
-        """ Place order method
+        """Place order method
 
         :param food_name: string
         :param waiter: Waiter class object
