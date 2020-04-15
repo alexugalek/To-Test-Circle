@@ -25,7 +25,7 @@ def file_handler(file_name):
     :param file_name: existing filename
     :return: list of strings from file
     """
-    with open(file_name, encoding="ISO-8859-1") as file:
+    with open(file_name, encoding="utf-16") as file:
         return [line.strip() for line in file]
 
 
@@ -38,7 +38,7 @@ def ratings_gist_handler(file_name):
     :param file_name: <directory>/ratings.txt
     :return: list of tuples
     """
-    with open(file_name, encoding="ISO-8859-1") as file:
+    with open(file_name, encoding="utf-16") as file:
         return [(re.findall(r'\d\.\d', line), re.findall(r'\d+$', line))
                 for line in file]
 
@@ -52,11 +52,9 @@ def years_gist_handler(file_name):
     :param file_name: <directory>/years.txt
     :return: list of tuples
     """
-    with open(file_name, encoding="ISO-8859-1") as file:
-        return [
-            (re.findall(r'\d{4}', line), re.findall(r'\d+$', line))
-            for line in file
-                ]
+    with open(file_name, encoding="utf-16") as file:
+        return [(re.findall(r'\d{4}', line), re.findall(r'\d+$', line))
+                for line in file]
 
 
 @ddt.ddt
