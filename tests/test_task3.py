@@ -40,9 +40,9 @@ def ratings_gist_handler(file_name):
     """
     with open(file_name) as file:
         return [
-                (re.findall(r'\d\.\d', line), re.findall(r'\d+$', line))
-                for line in file
-            ]
+            (re.findall(r'\d\.\d', line), re.findall(r'\d+$', line))
+            for line in file
+                ]
 
 
 def years_gist_handler(file_name):
@@ -56,9 +56,9 @@ def years_gist_handler(file_name):
     """
     with open(file_name) as file:
         return [
-                (re.findall(r'\d{4}', line), re.findall(r'\d+$', line))
-                for line in file
-            ]
+            (re.findall(r'\d{4}', line), re.findall(r'\d+$', line))
+            for line in file
+                ]
 
 
 @ddt.ddt
