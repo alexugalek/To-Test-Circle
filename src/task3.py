@@ -25,7 +25,7 @@ def doc_parser():
     line_offset = 1
 
     try:
-        with open('data5/ratings.list', 'r', encoding="utf-16") as file:
+        with open('data5/ratings.list', 'r', errors='replace') as file:
 
             for line in file:
                 if line_offset < LINE_OFFSET:
